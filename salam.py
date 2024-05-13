@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 def find_orientation(template_path, test_path):
     # Load images
@@ -47,18 +48,18 @@ def find_orientation(template_path, test_path):
     # Annotate test image with rotation
     cv2.putText(test_img, f"Rotation: {theta:.2f} degrees", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)  # Changed text color
 
-    # Display the result
-    window_name = 'Annotated Test Image'
-    cv2.imshow(window_name, test_img)
+    # Create output directory if it doesn't exist
+    output_folder = 'output'
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
-    # Wait for 'Q' key to be pressed to close the window
-    while True:
-        k = cv2.waitKey(1) & 0xFF
-        if k == ord('q'):
-            cv2.destroyAllWindows()
-            break
+    # Save annotated image to the output folder
+    output_file = os.path.join(output_folder, os.path.basename(test_path))
+    cv2.imwrite(output_file, test_img)
 
-    cv2.destroyAllWindows()
+    print(f"Annotated image saved: {output_file}")
 
 # Example usage
-find_orientation('template images/screenshot_2024-05-02_17-12-17.jpg', 'test images/screenshot_2024-05-02_17-19-10.jpg')
+template_path = 'template images/screenshot_2024-05-02_17-12-17.jpg'
+test_path = 'test images/15.jpg'
+find_orientation(template_path, test_path)
