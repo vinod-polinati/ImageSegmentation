@@ -4,11 +4,13 @@ This repository contains a Python script for template matching and orientation d
 
 #### Prerequisites
 - Python 3.x
-- Segment Anything (`!pip install 'git+https://github.com/facebookresearch/segment-anything.git' `) 
-- YoloV8 (`!pip install ultralytics`)
+- Segment Anything (`pip install 'git+https://github.com/facebookresearch/segment-anything.git' `) (`wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`)
+- YoloV8 (`pip install ultralytics`)
 - OpenCV (`pip install opencv-python`)
-- Segment Anything 
-
+- Numpy (`pip install numpy`)
+- ScikitLearn (`pip install scikit-learn`)
+- Matplotlib (`pip install matplotlib`)
+  
 #### Usage
 1. Clone the repository:
    ```bash
