@@ -1,15 +1,35 @@
-### Object Detection & Orientation using YoloV8 & SAM
+### Object Detection & Orientation using Segment Anything and YoloV8
 
-This repository contains a Python script for template matching and orientation detection in images using YoloV8 & Segment Anything by Meta AI . The script utilizes keypoint detection, feature matching, homography estimation, and rotation angle calculation to identify and annotate the orientation of a template image within a larger test image.
+Utilizing the power of YOLOv8 and Segment Anything by Meta AI, this Python script offers sophisticated template matching and precise orientation detection capabilities, revolutionizing image analysis with cutting-edge technology."
 
 #### Prerequisites
 - Python 3.x
-- Segment Anything (`pip install 'git+https://github.com/facebookresearch/segment-anything.git' `) (`wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth`)
-- YoloV8 (`pip install ultralytics`)
-- OpenCV (`pip install opencv-python`)
-- Numpy (`pip install numpy`)
-- ScikitLearn (`pip install scikit-learn`)
-- Matplotlib (`pip install matplotlib`)
+- Segment Anything 
+  ```bash
+      pip install 'git+https://github.com/facebookresearch/segment-anything.git'
+
+      wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+  ```
+- YoloV8 
+  ```bash
+    pip install ultralytics
+  ```
+- OpenCV
+  ```bash
+    pip install opencv-python
+  ```
+- Numpy
+  ```bash
+    pip install numpy
+  ```
+- ScikitLearn
+  ```bash
+    pip install scikit-learn
+  ```
+- Matplotlib
+  ```bash
+    pip install matplotlib
+  ```
   
 #### Usage
 1. Clone the repository:
